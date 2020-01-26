@@ -1,11 +1,9 @@
 #include <Arduino.h>
 #include <Servo.h>
 
-const uint8_t ALARM = 10;
 const uint8_t button = 2;
 volatile bool LED_STATE = false;
 volatile bool enable_button = true;
-Servo myservo;
 
 uint32_t sysTick = 0;
 uint32_t prevTick = 0;
@@ -63,4 +61,4 @@ void HANDLE_BUTTON_ISR()
 }
 
 //NOTES:
-//for button debounce, once button has been pressed, ignore new presses until 50mS has elapsed
+//for button debounce, once button has been pressed, ignore new presses until 200mS has elapsed
